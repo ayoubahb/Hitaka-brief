@@ -1,46 +1,114 @@
 :root {
 	--main_color: #c43837;
 }
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-header {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 55px;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: white;
-	padding: 30px 10%;
-}
-header .logo img{
-	height: 55px;
-}
-header a {
-	color: black;
-	text-decoration: none;
-	font-weight: 500;
-	padding: 10px 22px;
-}
 a {
 	text-decoration: none;
 }
 ul {
 	list-style: none;
 }
-header ul {
+section {
+	padding: 0 10%;
+	margin: 80px 0;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	margin: 0;
+	height: fit-content;
+	z-index: 1000;
+	background: white;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo img {
+	height: 55px;
+}
+
+.header .links {
+	position: relative;
+}
+
+.header .links .icon {
+	width: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.header .links .icon span {
+	background-color: #333;
+	margin-bottom: 5px;
+	height: 2px;
+}
+
+.header .links .icon span:first-child {
+	width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+	width: 60%;
+	transition: 0.3s;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+	width: 100%;
+}
+
+.header .links .icon span:last-child {
+	width: 100%;
+}
+
+.header .links ul {
 	list-style: none;
+	background-color: #f6f6f6;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 15px);
+	min-width: 200px;
+	display: none;
+	z-index: 1;
 }
-header ul li {
-	display: inline-block;
+
+.header .links ul::before {
+	content: '';
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #f6f6f6 transparent;
+	position: absolute;
+	right: 5px;
+	top: -20px;
 }
+
+.header .links:hover ul {
+	display: block;
+}
+
+.header .links ul li a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #333;
+	transition: 0.3s;
+}
+
+.header .links ul li a:hover {
+	padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) a {
+	border-bottom: 1px #ddd solid;
+}
+
 .home {
 	width: 100%;
 	height: 100vh;
@@ -79,16 +147,29 @@ header ul li {
 	letter-spacing: 4px;
 	margin-bottom: 20px;
 }
-section {
-	padding: 0 10%;
-	margin: 80px 0;
-}
 .histoire .content,
 .about .content {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 	column-gap: 30px;
 	row-gap: 25px;
+}
+.img {
+	width: 200px;
+	height: fit-content;
+	justify-self: end;
+}
+@media (max-width: 785px) {
+	.about .content div:first-child {
+		order: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.img {
+		justify-self: center;
+	}
 }
 .his {
 	display: flex;
@@ -108,10 +189,6 @@ section {
 	border: none;
 	border-radius: 20px;
 	width: 200px;
-}
-.img {
-	width: 200px;
-	height: fit-content;
 }
 
 .title {
@@ -142,6 +219,23 @@ section {
 	margin-top: 80px;
 	text-align: center;
 }
+.home-menu p {
+	text-align: center;
+}
+#cart {
+	background-color: #f6f6f6;
+	position: absolute;
+	right: 0;
+	bottom: -50px;
+	width: 30%;
+	display: none;
+	margin: 0 35%;
+	z-index: 1;
+	height: fit-content;
+	text-align: center;
+	padding: 10px;
+}
+
 .menu-grid .itm .img1 {
 	width: 100%;
 	height: 177px;
@@ -322,7 +416,8 @@ section {
 	background-color: var(--main_color);
 }
 
-.btn span,.items h4{
+.btn span,
+.items h4 {
 	font-size: 20px;
 	font-weight: bold;
 }

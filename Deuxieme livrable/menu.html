@@ -3,6 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="description"
+			content="Enjoy the best of Japanese cuisine in Morocco at HITAKA'S restaurants."
+		/>
+		<meta
+			name="keywords"
+			content="sushi,restaurant,eat,salade,obento,hitaka,japanese restaurant,food,japanese restaurant near to me"
+		/>
 		<!-- Render All Elements Normally -->
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<!-- Font Awesome -->
@@ -11,21 +19,33 @@
 			rel="stylesheet"
 			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
 		/>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<title>Document</title>
+		<title>Hitaka's restaurant - Menu</title>
 	</head>
 	<body>
 		<!-- header -->
-		<header>
-			<a href="" class="logo"><img src="./img/logo.png" alt=""></a>
-			<ul class="navbar">
-				<li><a href="">Acceuil</a></li>
-				<li><a href="">A props</a></li>
-				<li><a href="">Menu</a></li>
-				<li><a href="">Contact</a></li>
-			</ul>
-		</header>
+		<section class="header">
+			<a href="./index.html" class="logo"
+				><img src="./img/logo.png" alt=""
+			/></a>
+			<i class="fa-solid fa-cart-shopping fa-2x" style="color: #c43837"></i>
+			<div id="cart" style="display: none"></div>
+			<div class="links">
+				<span class="icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				<ul>
+					<li><a href="./index.html">Acceuil</a></li>
+					<li><a href="./apropos.html">A props</a></li>
+					<li><a href="./menu.html">Menu</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</section>
 		<!-- Home section -->
 		<section class="home">
 			<div class="home-text">
@@ -34,7 +54,6 @@
 		</section>
 		<!-- menu -->
 		<section class="menu">
-			<i class="fa-solid fa-cart-shopping fa-2x" style="color: #c43837"></i>
 			<form class="">
 				<label for="">Votre choix</label>
 				<select name="" id="">
@@ -70,7 +89,7 @@
 						<button>Ajouter à la carte</button>
 					</div>
 				</div>
-        
+
 				<div class="items">
 					<img src="./img/img1.jpeg" alt="" />
 					<h4>Salade</h4>

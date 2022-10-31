@@ -29,6 +29,23 @@ section {
 	justify-content: space-between;
 	align-items: center;
 }
+.div-icon {
+	position: relative;
+}
+.div-icon .num-items {
+	position: absolute;
+	display: none;
+	width: 20px;
+	height: 20px;
+	background-color: var(--main_color);
+	color: white;
+	font-size: 15px;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 2px;
+	top: -10px;
+	right: -10px;
+}
 
 .header .logo img {
 	height: 55px;
@@ -230,6 +247,9 @@ section {
 	background-color: var(--main_color);
 	color: white;
 	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	z-index: 100;
 	top: 60px;
 	left: 0;
@@ -252,24 +272,27 @@ table {
 }
 table td {
 	padding: 10px;
+	border-bottom: 1px solid white;
+}
+.checkout {
+	padding: 10px;
+	background: white;
+	border: none;
+	align-self: center;
+	width: 30%;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: bold;
 }
 table td input {
 	width: 40px;
 }
 .total {
 	text-align: right;
-	bottom: 10px;
-	right: 10px;
-	display: block;
 	font-size: 30px;
 	font-weight: 700;
 }
-/* #cart div:not(:first-child) {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 10px;
-} */
+
 .itm-img {
 	width: 100%;
 }

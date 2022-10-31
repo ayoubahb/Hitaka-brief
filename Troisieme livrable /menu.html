@@ -23,32 +23,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Hitaka's restaurant - Menu</title>
-		<script src="./js/main.js" async></script>
 	</head>
 	<body>
 		<div id="cart">
+			<div class="total">
+				<span>Total: </span>
+				<span class="totalprice">0</span>
+				<span>$</span>
+			</div>
 			<table>
 				<caption>
 					<b>CARD</b>
 				</caption>
-				<div class="total">
-					<span>Total: </span>
-					<span class="totalprice">0</span>
-					<span>$</span>
-				</div>
 				<tbody></tbody>
 			</table>
+			<button class="checkout">Valider</button>
 		</div>
 		<!-- header -->
 		<section class="header">
 			<a href="./index.html" class="logo"
 				><img src="./img/logo.png" alt="LOGO"
 			/></a>
-			<i
+			<div class="div-icon">
+				<i
 				class="fa-solid fa-cart-shopping fa-2x"
 				style="color: #c43837"
 				id="icon"
 			></i>
+			<span class="num-items"></span>
+			</div>
 			<div class="links">
 				<span class="icon">
 					<span></span>
@@ -377,5 +380,6 @@
 				</div>
 			</div>
 		</section>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
